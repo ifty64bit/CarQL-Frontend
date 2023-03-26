@@ -18,6 +18,7 @@ function Header({}: Props) {
             bg={"slateblue"}
             position="fixed"
             top="0"
+            zIndex="100"
         >
             <Box>
                 <Link as={NextLink} href="/">

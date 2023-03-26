@@ -13,11 +13,22 @@ type Props = {
 function index({ vehicle_data }: Props) {
     return (
         <Container maxW={"container.xl"} pt="20">
-            <Grid gridTemplateColumns={"repeat(2, max-content)"} pt="2" gap={5}>
+            <Grid
+                gridTemplateColumns={"repeat(2, auto)"}
+                pt="2"
+                gap={5}
+                justifyContent="start"
+            >
                 <GridItem w={"2xs"}>
                     <Sidebar />
                 </GridItem>
-                <GridItem>
+                <GridItem
+                    as={Flex}
+                    gap={5}
+                    flexWrap="wrap"
+                    flexDirection="row"
+                    width={"100%"}
+                >
                     <VehicleList vehicle_data={vehicle_data} />
                 </GridItem>
             </Grid>

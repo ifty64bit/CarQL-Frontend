@@ -3,6 +3,7 @@ import {
     User as prismaUser,
     Vehicle as prismaVehicle,
     Comments as prismaComments,
+    Session as prismaSession,
 } from "@prisma/client";
 
 enum VehicleType {
@@ -23,6 +24,12 @@ enum VehicleType {
 enum Role {
     ADMIN = "ADMIN",
     USER = "USER",
+}
+
+export interface Session extends prismaSession {
+    user: {
+        id: string;
+    };
 }
 export interface GraphQLContext {
     prisma: PrismaClient;

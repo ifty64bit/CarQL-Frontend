@@ -97,6 +97,11 @@ model Vehicle {
     Comments            Comments[]
 }
 
+model Brands {
+    id   String @id @default(auto()) @map("_id") @db.ObjectId
+    name String
+}
+
 model Comments {
     id        String  @id @default(auto()) @map("_id") @db.ObjectId
     comment   String

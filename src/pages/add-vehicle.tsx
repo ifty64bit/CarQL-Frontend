@@ -1,9 +1,10 @@
+import AddVehicle from "@/modules/add-vehicle";
 import React from "react";
 
 type Props = {};
 
 function CreateVehicle({}: Props) {
-    return <div>CreateVehicle</div>;
+    return <AddVehicle />;
 }
 
 export default CreateVehicle;

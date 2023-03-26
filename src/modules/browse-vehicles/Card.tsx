@@ -8,12 +8,11 @@ type Props = {
 };
 
 function Card({ vehicle }: Props) {
-
     return (
         <Box rounded={"lg"} overflow="hidden" w={"80"} bg="whiteAlpha.100">
             <Stack>
                 <Image
-                    src="https://bit.ly/sage-adebayo"
+                    src={`${process.env.NEXT_PUBLIC_IMG_GET_URL}/${vehicle?.images[0].name}`}
                     alt="Segun Adebayo"
                     width={"xs"}
                     height={"40"}

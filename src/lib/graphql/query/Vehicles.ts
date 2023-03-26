@@ -10,11 +10,23 @@ export const GET_ALL_VEHICLES = gql`
                 model
                 hourly_rate
                 transmission
+                images {
+                    name
+                    originalName
+                }
                 type
                 user {
                     name
                 }
             }
+        }
+    }
+`;
+
+export const GET_BRANDS = gql`
+    query {
+        brands {
+            name
         }
     }
 `;
